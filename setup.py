@@ -1,14 +1,12 @@
 import pathlib
 from setuptools import setup
 
-import bech32
-
 HERE = pathlib.Path(__file__).parent
 README = (HERE / "README.md").read_text()
 
 setup(
     name="bech32",
-    version=bech32.__version__,
+    version="1.1.0",
     description="Reference implementation for Bech32 and segwit addresses.",
     long_description=README,
     long_description_content_type="text/markdown",
