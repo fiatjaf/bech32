@@ -10,6 +10,8 @@ setup(
     description="Reference implementation for Bech32 and segwit addresses.",
     long_description=README,
     long_description_content_type="text/markdown",
+    maintainer="fiatjaf",
+    maintainer_email="fiatjaf@alhur.es",
     url="https://github.com/fiatjaf/bech32",
     license="MIT",
     classifiers=[
