@@ -22,4 +22,5 @@ setup(
     packages=["bech32"],
     include_package_data=True,
     install_requires=[],
+    python_requires=">=3.5",
 )
