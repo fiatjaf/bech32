@@ -67,7 +67,7 @@ def bech32_decode(bech):
         return (None, None)
     bech = bech.lower()
     pos = bech.rfind("1")
-    if pos < 1 or pos + 7 > len(bech):  # or len(bech) > 90:
+    if pos < 1 or pos > 83 or pos + 7 > len(bech):  # or len(bech) > 90:
         return (None, None)
     if not all(x in CHARSET for x in bech[pos + 1 :]):
         return (None, None)
