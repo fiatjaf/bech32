@@ -6,7 +6,7 @@ README = (HERE / "README.md").read_text()
 
 setup(
     name="bech32",
-    version="1.1.0",
+    version="1.2.0",
     description="Reference implementation for Bech32 and segwit addresses.",
     long_description=README,
     long_description_content_type="text/markdown",
