@@ -8,3 +8,4 @@ python:
 script:
   - pip install mypy==0.761 && mypy .
   - python -m unittest
+  - echo "testing travis, dont merge"
