@@ -20,6 +20,8 @@ setup(
         "Programming Language :: Python :: 3.7",
     ],
     packages=["bech32"],
-    include_package_data=True,
+    package_data={"bech32": ["py.typed"]},
     install_requires=[],
+    python_requires=">=3.5",
+    zip_safe=False,  # mypy needs this to be able to find the package
 )

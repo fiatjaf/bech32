@@ -122,6 +122,8 @@ class TestSegwitAddress(unittest.TestCase):
             if witver is None:
                 hrp = "tb"
                 witver, witprog = bech32.decode(hrp, address)
+            assert witver is not None
+            assert witprog is not None
             self.assertIsNotNone(witver)
             scriptpubkey = segwit_scriptpubkey(witver, witprog)
             self.assertEqual(scriptpubkey, binascii.unhexlify(hexscript))
