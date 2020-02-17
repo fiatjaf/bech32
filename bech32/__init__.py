@@ -122,7 +122,8 @@ def decode(hrp: str, addr: str) -> Union[Tuple[None, None], Tuple[int, List[int]
 def encode(hrp: str, witver: int, witprog: Iterable[int]) -> Optional[str]:
     """Encode a segwit address."""
     five_bit_witprog = convertbits(witprog, 8, 5)
-    assert five_bit_witprog is not None
+    if five_bit_witprog is None:
+        return None
     ret = bech32_encode(hrp, [witver] + five_bit_witprog)
     if decode(hrp, ret) == (None, None):
         return None
